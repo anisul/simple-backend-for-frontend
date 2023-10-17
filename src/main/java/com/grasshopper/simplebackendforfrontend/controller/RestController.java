@@ -3,11 +3,10 @@ package com.grasshopper.simplebackendforfrontend.controller;
 import com.grasshopper.simplebackendforfrontend.service.BoredIpService;
 import com.grasshopper.simplebackendforfrontend.types.BoredIpInfo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@Controller
+@org.springframework.web.bind.annotation.RestController
 @RequiredArgsConstructor
 public class RestController {
 

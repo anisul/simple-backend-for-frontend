@@ -21,13 +21,10 @@ public class BoredIpServiceImpl implements BoredIpService {
         var boredApiResponse = boredApiClient.getActivities();
         var ipInfoApiResponse = ipInfoApiClient.getIpInfo(ip);
 
-        var topBoredApiInfo = boredApiResponse.stream()
-                .findFirst()
-                .orElse(BoredApiResponse.builder().build());
 
         var result = BoredIpInfo.builder()
-                .accessibility(topBoredApiInfo.getAccessibility())
-                .activity(topBoredApiInfo.getActivity())
+                .accessibility(boredApiResponse.getAccessibility())
+                .activity(boredApiResponse.getActivity())
                 .requesterIp(ipInfoApiResponse.getIp())
                 .requesterLoc(ipInfoApiResponse.getLoc())
                 .requesterTimezone(ipInfoApiResponse.getTimezone())

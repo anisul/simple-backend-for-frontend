@@ -10,5 +10,5 @@ import java.util.List;
 public interface BoredApiClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/activity")
-    List<BoredApiResponse> getActivities();
+    BoredApiResponse getActivities();
 }
