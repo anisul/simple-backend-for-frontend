@@ -13,6 +13,7 @@
 - [Request and Response Examples](#request-and-response-examples)
 - [Error Handling](#error-handling)
 - [Testing](#testing)
+- [Performance Metrics](#performance-metrics)
 - [License](#license)
 
 ## Introduction
@@ -76,5 +77,29 @@ To test the API, you can use tools like **Postman**, **curl**, or your preferred
 
 ## License
 This API is released under the **MIT License**, allowing you to use and modify it as needed for your purposes.
+
+## Performance Metrics
+
+### Synchronous vs. Asynchronous Processing
+
+In our Spring Boot application, we have implemented both synchronous and asynchronous approaches to retrieve data from external APIs. The primary focus is on the `/v1/api/bored-ip/{ip}` endpoint, where we fetch data from upstream services. Notably, no caching mechanism is involved in these metrics.
+
+#### Synchronous Approach
+
+- **Request Count**: 1000
+- **Average Response Time**: 0.791 seconds
+
+In the synchronous approach, we made 1000 HTTP requests, and the average response time for these requests was approximately 0.791 seconds.
+
+#### Asynchronous Approach
+
+- **Request Count**: 1000
+- **Average Response Time**: 0.550 seconds
+
+In the asynchronous approach, we made 1000 HTTP requests as well, and the average response time for these requests was approximately 0.550 seconds. This approach leverages asynchronous processing to improve performance.
+
+These performance metrics provide insights into the response times of our application for the specific endpoint. Please note that the actual response times may vary based on factors like network conditions and the load on the system.
+
+
 
 Please replace placeholders like `{ip}`, `localhost:8080`, and URLs with your actual values. Additionally, include any specific usage guidelines, rate limits, or authentication requirements if applicable to your API.

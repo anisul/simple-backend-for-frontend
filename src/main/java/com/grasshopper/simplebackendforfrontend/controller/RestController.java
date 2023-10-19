@@ -14,6 +14,6 @@ public class RestController {
 
     @GetMapping(value = "/v1/api/bored-ip/{ip}")
     public BoredIpInfo getBoredIpInfo(@PathVariable("ip") String ip) {
-        return boredIpService.getBoredIpInfo(ip);
+        return boredIpService.getBoredIpInfoAsync(ip);
     }
 }

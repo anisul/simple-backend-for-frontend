@@ -4,4 +4,5 @@ import com.grasshopper.simplebackendforfrontend.types.BoredIpInfo;
 
 public interface BoredIpService {
     BoredIpInfo getBoredIpInfo(String ip);
+    BoredIpInfo getBoredIpInfoAsync(String ip);
 }
